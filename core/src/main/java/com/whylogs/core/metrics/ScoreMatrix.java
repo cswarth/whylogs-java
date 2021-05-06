@@ -230,6 +230,10 @@ public class ScoreMatrix {
     }
 
     final int n = labels.size();
+    if (n == 0) {
+      return null;
+    }
+
     val values = newMatrix(n);
     for (int i = 0; i < msg.getScoresCount(); i++) {
       int row = i / n;
